@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Donation &amp; Payment Portal | Marianne Foundation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="donate.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Marianne Foundation Logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">MARIANNE</span>
+          <span class="brand-subtitle">FOUNDATION FOR YOUTH DEVELOPMENT</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="index.html#about">ABOUT</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="vsla.html">VSLA SAVINGS</a>
+        <a href="donate.html" class="active">DONATE &amp; PAY</a>
+        <a href="index.html#contact">CONTACT</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="page-hero donate-hero">
+    <div class="hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">SECURE PAYMENT GATEWAY</span>
+      <h1>Support Our <span class="italic-accent">Mission.</span></h1>
+      <p class="hero-description">
+        Contribute securely via ObiPay Mobile Money (MTN &amp; Airtel) or Bank Account routing. Enter your details below to initiate instant processing.
+      </p>
+    </div>
+  </section>
+
+  <!-- Comprehensive Donation Form Section -->
+  <section class="donate-section">
+    <div class="container donate-wrapper">
+      <div class="donate-form-card">
+        <div class="form-card-header">
+          <h2>Secure Contribution Form</h2>
+          <p>Please fill out your personal contact details, account or payment details, phone number, and contribution reason.</p>
+        </div>
+
+        <form id="comprehensiveDonateForm">
+          
+          <!-- Section 1: Donor Personal Information -->
+          <fieldset class="form-section-fieldset">
+            <legend>1. Personal Information</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="donorName">Full Name *</label>
+                <input type="text" id="donorName" required placeholder="e.g. Nakato Grace" />
+              </div>
+              <div class="form-group">
+                <label for="donorEmail">Email Address *</label>
+                <input type="email" id="donorEmail" required placeholder="grace@example.com" />
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="donorPhoneContact">Contact Phone Number *</label>
+                <input type="tel" id="donorPhoneContact" required placeholder="+256 700 000000" />
+              </div>
+              <div class="form-group">
+                <label for="donorAddress">Physical Address / Town</label>
+                <input type="text" id="donorAddress" placeholder="e.g. Kampala / Ibanda, Uganda" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Section 2: Account & Payment Details -->
+          <fieldset class="form-section-fieldset">
+            <legend>2. Payment &amp; Account Details</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="paymentMethod">Payment Method / Gateway *</label>
+                <select id="paymentMethod" required>
+                  <option value="ObiPay Mobile Money">ObiPay Mobile Money Push</option>
+                  <option value="Direct Bank Transfer">Direct Bank Account Transfer</option>
+                  <option value="Merchant Account Code">Merchant Account / Till</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="accountNumber">Account Number / Ref (Optional)</label>
+                <input type="text" id="accountNumber" placeholder="e.g. ACC-987654 or Bank Ref" />
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="network">Mobile Network (for USSD prompt) *</label>
+                <select id="network" required>
+                  <option value="MTN">MTN Mobile Money</option>
+                  <option value="AIRTEL">Airtel Money</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="phoneNumber">Mobile Number to Charge *</label>
+                <input type="tel" id="phoneNumber" required placeholder="077XXXXXXXX" />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Section 3: Amount, Purpose & Message -->
+          <fieldset class="form-section-fieldset">
+            <legend>3. Contribution Reason &amp; Amount</legend>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="amount">Amount (UGX) *</label>
+                <input type="number" id="amount" required min="1000" placeholder="50000" />
+              </div>
+              <div class="form-group">
+                <label for="program">Donation Purpose / Program *</label>
+                <select id="program" required>
+                  <option value="General Youth Development Fund">General Foundation Fund</option>
+                  <option value="Education & Scholarships">Education &amp; Scholarships</option>
+                  <option value="Skills & Vocational Training">Skills Training Program</option>
+                  <option value="VSLA Micro-Finance Support">VSLA Women Savings Group</option>
+                  <option value="Youth Mentorship Bootcamp">Youth Mentorship Bootcamp</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message / Reason / Dedication</label>
+              <textarea id="message" rows="3" placeholder="Write a note of encouragement or specify allocation..."></textarea>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="btn btn-primary full-width" id="submitBtn">
+            INITIATE SECURE PAYMENT &rarr;
+          </button>
+
+          <div id="statusBox" class="status-box"></div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Marianne Foundation Logo" class="footer-logo" />
+        <div>
+          <span class="footer-title">MARIANNE</span>
+          <span class="footer-sub">FOUNDATION FOR YOUTH DEVELOPMENT</span>
+        </div>
+      </div>
+      <div class="footer-contact-items">
+        <a href="tel:+256700000000" class="footer-item">
+          <span class="f-icon">&#9742;</span>
+          <span>+256 (0) 700 000 000</span>
+        </a>
+        <a href="mailto:info@mariannefoundation.org" class="footer-item">
+          <span class="f-icon">&#9993;</span>
+          <span>info@mariannefoundation.org</span>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="donate.js"></script>
+</body>
+</html>

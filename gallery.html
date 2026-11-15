@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Marianne Foundation for Youth Development</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="gallery.css" />
+</head>
+<body>
+
+  <!-- Top Navigation Bar (Consistent with Home Page) -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="index.html" class="brand">
+        <img src="logo.png" alt="Marianne Foundation Logo" class="brand-logo" />
+        <div class="brand-text">
+          <span class="brand-title">MARIANNE</span>
+          <span class="brand-subtitle">FOUNDATION FOR YOUTH DEVELOPMENT</span>
+        </div>
+      </a>
+
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">HOME</a>
+        <a href="index.html#about">ABOUT</a>
+        <div class="dropdown">
+          <a href="index.html#programs" class="dropdown-trigger">PROGRAMS <span class="caret">&#9662;</span></a>
+          <div class="dropdown-menu">
+            <a href="index.html#programs">Education &amp; Scholarships</a>
+            <a href="index.html#programs">Skills &amp; Vocational Training</a>
+            <a href="index.html#programs">Youth Mentorship</a>
+            <a href="index.html#programs">Health &amp; Wellness</a>
+            <a href="index.html#programs">Community Outreach</a>
+          </div>
+        </div>
+        <a href="gallery.html" class="active">GALLERY</a>
+        <a href="index.html#stories">STORIES</a>
+        <a href="index.html#contact">CONTACT</a>
+        <button class="btn btn-primary nav-cta" data-modal="donateModal">SUPPORT US</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Gallery Page Banner -->
+  <section class="page-hero">
+    <div class="hero-overlay"></div>
+    <div class="container page-hero-content">
+      <span class="eyebrow">MOMENTS OF TRANSFORMATION</span>
+      <h1>Our <span class="italic-accent">Gallery.</span></h1>
+      <p class="hero-description">
+        Snapshots of young leaders learning, collaborating, and building brighter futures across our community programs.
+      </p>
+    </div>
+  </section>
+
+  <!-- Filterable Gallery Showcase -->
+  <section class="gallery-page-section">
+    <div class="container">
+      <div class="section-divider-header">
+        <span class="line"></span>
+        <h2>EXPLORE OUR WORK IN ACTION</h2>
+        <span class="line"></span>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="gallery-filters" role="tablist" aria-label="Filter gallery by program">
+        <button class="filter-btn active" data-filter="all">ALL MOMENTS</button>
+        <button class="filter-btn" data-filter="education">EDUCATION</button>
+        <button class="filter-btn" data-filter="skills">SKILLS TRAINING</button>
+        <button class="filter-btn" data-filter="mentorship">MENTORSHIP</button>
+        <button class="filter-btn" data-filter="outreach">COMMUNITY OUTREACH</button>
+      </div>
+
+      <!-- Responsive Photo Grid -->
+      <div class="full-gallery-grid" id="galleryGrid">
+        <figure class="photo-tile" data-category="mentorship" data-title="Annual Youth Leadership Bootcamp" data-desc="Young men and women collaborating during peer leadership and civic responsibility sessions.">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?auto=format&fit=crop&w=800&q=85" alt="Youth Leadership Bootcamp" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">MENTORSHIP</span>
+            <h3>Annual Youth Leadership Bootcamp</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="skills" data-title="Digital &amp; Coding Skilling Lab" data-desc="Practical computer literacy, web development, and workplace readiness training.">
+          <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=800&q=85" alt="Digital & Coding Skilling Lab" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">SKILLS TRAINING</span>
+            <h3>Digital &amp; Coding Skilling Lab</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="outreach" data-title="Community Youth Dialogue Forum" data-desc="Open town-hall discussions uniting youth voices with local community leaders.">
+          <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=800&q=85" alt="Community Youth Dialogue Forum" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">COMMUNITY OUTREACH</span>
+            <h3>Community Youth Dialogue Forum</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="education" data-title="Vocational Cohort Graduation" data-desc="Celebrating graduates completing their six-month technical and entrepreneurship tracks.">
+          <img src="https://images.unsplash.com/photo-1531545514256-b1400bc00f31?auto=format&fit=crop&w=800&q=85" alt="Vocational Cohort Graduation" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">EDUCATION</span>
+            <h3>Vocational Cohort Graduation</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="education" data-title="Secondary Scholarship &amp; Study Circles" data-desc="Evening study groups and academic resource distribution for scholarship beneficiaries.">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=800&q=85" alt="Secondary Scholarship Study Circles" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">EDUCATION</span>
+            <h3>Secondary Scholarship Study Circles</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="skills" data-title="Hands-On Technical &amp; Craft Workshop" data-desc="Equipping trainees with practical vocational tools for sustainable self-employment.">
+          <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?auto=format&fit=crop&w=800&q=85" alt="Hands-On Technical Workshop" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">SKILLS TRAINING</span>
+            <h3>Hands-On Technical &amp; Craft Workshop</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="mentorship" data-title="Gender-Inclusive Career Coaching" data-desc="One-on-one mentorship pairing young men and women with industry professionals.">
+          <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=800&q=85" alt="Gender-Inclusive Career Coaching" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">MENTORSHIP</span>
+            <h3>Gender-Inclusive Career Coaching</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="outreach" data-title="Green Community Tree Planting Drive" data-desc="Youth volunteers leading environmental conservation and neighborhood clean-up campaigns.">
+          <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=85" alt="Green Community Tree Planting Drive" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">COMMUNITY OUTREACH</span>
+            <h3>Green Community Tree Planting Drive</h3>
+          </figcaption>
+        </figure>
+
+        <figure class="photo-tile" data-category="outreach" data-title="Youth Sports &amp; Wellness Tournament" data-desc="Promoting teamwork, physical fitness, and mental health awareness through local sports.">
+          <img src="https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=800&q=85" alt="Youth Sports & Wellness Tournament" loading="lazy" />
+          <figcaption class="photo-caption">
+            <span class="photo-tag">COMMUNITY OUTREACH</span>
+            <h3>Youth Sports &amp; Wellness Tournament</h3>
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- Split CTA Banner -->
+  <section class="cta-banner">
+    <div class="cta-left">
+      <div class="cta-left-inner">
+        <svg class="botanical-flourish" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M12 52C22 34 38 20 54 12" />
+          <path d="M24 38c-6-2-10-8-8-14 6 0 12 4 14 10" />
+          <path d="M36 26c-6-2-10-8-8-14 6 0 12 4 14 10" />
+          <path d="M28 34c2 6 8 10 14 8 0-6-4-12-10-14" />
+        </svg>
+        <div>
+          <h3>Want to be part of our next story?</h3>
+          <p>Partner with us or volunteer to bring opportunity to youth.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-right" data-modal="donateModal">
+      <div class="cta-right-inner">
+        <div class="cta-circle-icon">
+          <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.6">
+            <path d="M16 27S5 19.5 5 12a6 6 0 0111-3.3A6 6 0 0127 12c0 7.5-11 15-11 15z" />
+          </svg>
+        </div>
+        <div>
+          <span class="cta-kicker">MAKE A DIFFERENCE</span>
+          <strong class="cta-action-text">PARTNER OR DONATE TODAY!</strong>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dark Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.png" alt="Marianne Foundation Logo" class="footer-logo" />
+        <div>
+          <span class="footer-title">MARIANNE</span>
+          <span class="footer-sub">FOUNDATION FOR YOUTH DEVELOPMENT</span>
+        </div>
+      </div>
+
+      <div class="footer-contact-items">
+        <a href="tel:+256700000000" class="footer-item">
+          <span class="f-icon">&#9742;</span>
+          <span>+256 (0) 700 000 000</span>
+        </a>
+        <a href="mailto:info@mariannefoundation.org" class="footer-item">
+          <span class="f-icon">&#9993;</span>
+          <span>info@mariannefoundation.org</span>
+        </a>
+        <div class="footer-item">
+          <span class="f-icon">&#9906;</span>
+          <span>Kampala &amp; Surrounding Communities</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fullscreen Photo Lightbox Viewer -->
+  <div class="lightbox-backdrop" id="lightboxModal" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close image">&times;</button>
+    <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous image">&#10094;</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lightbox-info">
+        <span class="photo-tag" id="lightboxTag"></span>
+        <h3 id="lightboxTitle"></h3>
+        <p id="lightboxDesc"></p>
+      </div>
+    </div>
+    <button class="lightbox-nav next" id="lightboxNext" aria-label="Next image">&#10095;</button>
+  </div>
+
+  <!-- Support Us Modal -->
+  <div class="modal-backdrop" id="donateModal" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModal" aria-label="Close modal">&times;</button>
+      <div class="modal-header">
+        <img src="logo.png" alt="Marianne Foundation" class="modal-logo" />
+        <h3 id="modalTitle">Support Marianne Foundation</h3>
+        <p>Join our mission to equip young people with skills, mentorship, and hope.</p>
+      </div>
+      <form id="supportForm" class="modal-form">
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input type="text" id="fullName" required placeholder="Enter your name" />
+        </div>
+        <div class="form-group">
+          <label for="emailAddress">Email Address</label>
+          <input type="email" id="emailAddress" required placeholder="you@example.com" />
+        </div>
+        <div class="form-group">
+          <label for="interestType">How would you like to help?</label>
+          <select id="interestType">
+            <option value="donate">Make a Financial Contribution</option>
+            <option value="volunteer">Volunteer as a Mentor / Trainer</option>
+            <option value="partner">Organizational Partnership</option>
+            <option value="enroll">Youth Program Inquiry</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" rows="3" placeholder="Tell us a bit about your interest..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary full-width">SUBMIT INQUIRY &rarr;</button>
+        <p class="form-feedback" id="formFeedback"></p>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="gallery.js"></script>
+</body>
+</html>
