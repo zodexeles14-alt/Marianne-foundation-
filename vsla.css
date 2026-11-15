@@ -1,17 +1,18 @@
 /* VSLA Page Specific Styles */
 .vsla-hero {
-  min-height: 330px;
+  min-height: auto;
+  padding: 40px 20px;
 }
 
 .vsla-main-section {
-  padding: 72px 0 90px;
+  padding: 40px 16px 60px;
   background-color: var(--bg-cream);
 }
 
 .vsla-grid {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 30px;
   align-items: stretch;
 }
 
@@ -26,46 +27,52 @@
 
 .vsla-info h2 {
   font-family: var(--font-serif);
-  font-size: 2.2rem;
+  font-size: 1.9rem;
   font-weight: 600;
   color: var(--forest-dark);
   line-height: 1.18;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 }
 
 .vsla-info p {
-  font-size: 0.94rem;
+  font-size: 0.92rem;
   color: var(--text-muted);
-  line-height: 1.65;
-  margin-bottom: 18px;
+  line-height: 1.6;
+  margin-bottom: 16px;
 }
 
 .vsla-stats-row {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 32px;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+@media (min-width: 480px) {
+  .vsla-stats-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .stat-box {
   background: #FFFFFF;
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
-  padding: 16px;
+  padding: 14px;
   text-align: center;
 }
 
 .stat-box strong {
   display: block;
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: var(--forest-dark);
   line-height: 1;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
 }
 
 .stat-box span {
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -76,34 +83,40 @@
 .vsla-form-card {
   background: #FFFFFF;
   border-radius: 6px;
-  padding: 36px;
-  box-shadow: 0 16px 40px rgba(19, 34, 19, 0.08);
+  padding: 24px 20px;
+  box-shadow: 0 12px 30px rgba(19, 34, 19, 0.06);
   border: 1px solid var(--border-subtle);
 }
 
+@media (min-width: 768px) {
+  .vsla-form-card {
+    padding: 36px;
+  }
+}
+
 .form-card-header {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .form-card-header h3 {
   font-family: var(--font-serif);
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: var(--forest-dark);
   margin-bottom: 6px;
 }
 
 .form-card-header p {
-  font-size: 0.86rem;
+  font-size: 0.84rem;
   color: var(--text-muted);
 }
 
 .vsla-form-card .form-group {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .vsla-form-card label {
   display: block;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -114,11 +127,11 @@
 .vsla-form-card input,
 .vsla-form-card select {
   width: 100%;
-  padding: 11px 14px;
+  padding: 12px 14px;
   border: 1px solid var(--border-subtle);
   border-radius: 4px;
   font-family: var(--font-sans);
-  font-size: 0.9rem;
+  font-size: 0.92rem;
   background: #FAFAFA;
 }
 
@@ -130,9 +143,17 @@
 }
 
 .form-row {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  flex-direction: column;
   gap: 14px;
+}
+
+@media (min-width: 600px) {
+  .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
 }
 
 .status-box {
@@ -163,4 +184,5 @@
   border: 1px solid #FFCDD2;
   color: #C62828;
   display: block;
-}
+  }
+  
