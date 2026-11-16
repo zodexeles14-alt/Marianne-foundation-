@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const submitBtn = document.getElementById('submitBtn');
   const statusBox = document.getElementById('statusBox');
-  const API_BASE_URL = 'http://localhost:5000/api/v1';
+  const API_BASE_URL = 'https://marianne-backend.onrender.com/api/v1';
 
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
