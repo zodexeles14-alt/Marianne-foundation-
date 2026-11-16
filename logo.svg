@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="300" height="300">
+  <defs>
+    <path id="bottomArc" d="M 48,162 A 103,103 0 0,0 252,162" />
+  </defs>
+  <circle cx="150" cy="150" r="144" fill="#FFFFFF" />
+  <circle cx="150" cy="150" r="131" fill="none" stroke="#15572E" stroke-width="2.6" />
+  <ellipse cx="150" cy="150" rx="134" ry="127" transform="rotate(-18 150 150)" fill="none" stroke="#15572E" stroke-width="2.2" />
+
+  <text x="150" y="103" text-anchor="middle" fill="#15572E" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="27" letter-spacing="1.5">MARIANNE</text>
+  <text x="150" y="131" text-anchor="middle" fill="#15572E" font-family="Georgia, 'Times New Roman', serif" font-weight="bold" font-size="26" letter-spacing="1.2">FOUNDATION</text>
+
+  <g stroke="#8A8BB8" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="129" cy="179" r="23" />
+    <line x1="112" y1="162" x2="96" y2="146" />
+    <polyline points="96,162 96,146 112,146" />
+
+    <circle cx="168" cy="179" r="23" />
+    <line x1="184" y1="196" x2="201" y2="213" />
+    <line x1="184" y1="213" x2="201" y2="196" />
+  </g>
+
+  <text fill="#15572E" font-family="'Trebuchet MS', Arial, sans-serif" font-weight="bold" font-size="14.5" letter-spacing="2.4">
+    <textPath href="#bottomArc" startOffset="50%" text-anchor="middle">FOR YOUTH DEVELOPMENT</textPath>
+  </text>
+</svg>
